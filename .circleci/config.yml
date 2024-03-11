@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build-and-test:
     macos:
-      xcode: 13.2.1
+      xcode: 14.3.1
     steps:
       - checkout
       - run:
@@ -14,8 +14,8 @@ jobs:
           name: Build and Test
           command: |
             xcodebuild clean test \
-              -workspace MyApp.xcworkspace \
-              -scheme "MyApp" \
+              -workspace CICDBlog.xcworkspace \
+              -scheme "CICDBlog" \
               -destination "platform=iOS Simulator,name=iPhone 13 Pro"
 workflows:
   build-and-test:
