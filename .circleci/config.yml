@@ -1,4 +1,8 @@
 version: 2.1
+
+orbs:
+  macos: circleci/macos@2
+
 jobs:
   build-and-test:
     macos:
@@ -8,6 +12,8 @@ jobs:
       FASTLANE_LANE: test
     steps:
       - checkout
+      - macos/switch-ruby:
+          version: 3.2
       - run: bundle install
       - run:
           name: Fastlane
