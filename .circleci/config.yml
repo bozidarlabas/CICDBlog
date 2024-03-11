@@ -19,7 +19,7 @@ jobs:
             xcodebuild clean test \
               -workspace CICDBlog.xcworkspace \
               -scheme "CICDBlog" \
-              -destination "platform=iOS Simulator,name=iPhone 14"
+              -destination "platform=iOS Simulator,name=iPhone 14 Pro"
 workflows:
   build-and-test:
     jobs:
