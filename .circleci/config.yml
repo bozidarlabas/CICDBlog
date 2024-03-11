@@ -1,24 +1,23 @@
-# .circleci/config.yml
 version: 2.1
 jobs:
   build-and-test:
     macos:
-      xcode: 14.3.1
-    environment:
-      FL_OUTPUT_DIR: output
-      FASTLANE_LANE: test
+      xcode: 13.2.1
     steps:
       - checkout
-      - run: bundle install
       - run:
-          name: Fastlane
-          command: bundle exec fastlane $FASTLANE_LANE
-      - store_artifacts:
-          path: output
-      - store_test_results:
-          path: output/scan
-
+          name: Install CocoaPods
+          command: |
+            sudo gem install cocoapods
+            pod install
+      - run:
+          name: Build and Test
+          command: |
+            xcodebuild clean test \
+              -workspace MyApp.xcworkspace \
+              -scheme "MyApp" \
+              -destination "platform=iOS Simulator,name=iPhone 13 Pro"
 workflows:
-  build-test-adhoc:
+  build-and-test:
     jobs:
       - build-and-test
