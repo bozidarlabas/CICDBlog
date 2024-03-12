@@ -24,13 +24,6 @@
 			remoteGlobalIDString = A5ED51C82B9EF7840096892F;
 			remoteInfo = CICDBlog;
 		};
-		A5ED51EA2B9EF7860096892F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A5ED51C12B9EF7840096892F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A5ED51C82B9EF7840096892F;
-			remoteInfo = CICDBlog;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +37,6 @@
 		A5ED51DA2B9EF7850096892F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5ED51DF2B9EF7860096892F /* CICDBlogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CICDBlogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5ED51E32B9EF7860096892F /* CICDBlogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CICDBlogTests.swift; sourceTree = "<group>"; };
-		A5ED51E92B9EF7860096892F /* CICDBlogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CICDBlogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +48,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A5ED51DC2B9EF7860096892F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A5ED51E62B9EF7860096892F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -86,7 +71,6 @@
 			children = (
 				A5ED51C92B9EF7840096892F /* CICDBlog.app */,
 				A5ED51DF2B9EF7860096892F /* CICDBlogTests.xctest */,
-				A5ED51E92B9EF7860096892F /* CICDBlogUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,24 +135,6 @@
 			productReference = A5ED51DF2B9EF7860096892F /* CICDBlogTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A5ED51E82B9EF7860096892F /* CICDBlogUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A5ED51F92B9EF7860096892F /* Build configuration list for PBXNativeTarget "CICDBlogUITests" */;
-			buildPhases = (
-				A5ED51E52B9EF7860096892F /* Sources */,
-				A5ED51E62B9EF7860096892F /* Frameworks */,
-				A5ED51E72B9EF7860096892F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A5ED51EB2B9EF7860096892F /* PBXTargetDependency */,
-			);
-			name = CICDBlogUITests;
-			productName = CICDBlogUITests;
-			productReference = A5ED51E92B9EF7860096892F /* CICDBlogUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -183,10 +149,6 @@
 						CreatedOnToolsVersion = 15.2;
 					};
 					A5ED51DE2B9EF7860096892F = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = A5ED51C82B9EF7840096892F;
-					};
-					A5ED51E82B9EF7860096892F = {
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = A5ED51C82B9EF7840096892F;
 					};
@@ -207,7 +169,6 @@
 			targets = (
 				A5ED51C82B9EF7840096892F /* CICDBlog */,
 				A5ED51DE2B9EF7860096892F /* CICDBlogTests */,
-				A5ED51E82B9EF7860096892F /* CICDBlogUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -224,13 +185,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A5ED51DD2B9EF7860096892F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A5ED51E72B9EF7860096892F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,13 +212,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5ED51E52B9EF7860096892F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -272,11 +219,6 @@
 			isa = PBXTargetDependency;
 			target = A5ED51C82B9EF7840096892F /* CICDBlog */;
 			targetProxy = A5ED51E02B9EF7860096892F /* PBXContainerItemProxy */;
-		};
-		A5ED51EB2B9EF7860096892F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A5ED51C82B9EF7840096892F /* CICDBlog */;
-			targetProxy = A5ED51EA2B9EF7860096892F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -517,44 +459,6 @@
 			};
 			name = Release;
 		};
-		A5ED51FA2B9EF7860096892F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4EFQD8RZ6V;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bozidar.blog.CICDBlogUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CICDBlog;
-			};
-			name = Debug;
-		};
-		A5ED51FB2B9EF7860096892F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4EFQD8RZ6V;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bozidar.blog.CICDBlogUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CICDBlog;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -581,15 +485,6 @@
 			buildConfigurations = (
 				A5ED51F72B9EF7860096892F /* Debug */,
 				A5ED51F82B9EF7860096892F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A5ED51F92B9EF7860096892F /* Build configuration list for PBXNativeTarget "CICDBlogUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A5ED51FA2B9EF7860096892F /* Debug */,
-				A5ED51FB2B9EF7860096892F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
