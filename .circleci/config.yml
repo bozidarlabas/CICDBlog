@@ -42,9 +42,8 @@ workflows:
   build-test-adhoc:
     jobs:
       - build-and-test
-      - adhoc
-    filters:
-      branches:
-        only: main
-      events:
-        - pull_request
+          filters:
+            branches:
+              only: main
+          events:
+            - pull_request
