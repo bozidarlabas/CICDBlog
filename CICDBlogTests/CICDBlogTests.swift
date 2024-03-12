@@ -19,9 +19,19 @@ final class CICDBlogTests: XCTestCase {
     }
 
     func testExample() throws {
-        XCTAssertEqual("Test", "Hello, World!")
+        XCTAssertEqual("Test1", "Hello, Worldd2!")
     }
 
+    
+    func testExample2() throws {
+        XCTAssertEqual("Hello, World!", "Hello, World!")
+    }
+    
+    func testExample3() throws {
+        XCTAssertEqual("Hello, World!", "Hello, World!")
+    }
+
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
