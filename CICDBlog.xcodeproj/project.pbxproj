@@ -14,8 +14,6 @@
 		A5ED51D62B9EF7850096892F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5ED51D52B9EF7850096892F /* Assets.xcassets */; };
 		A5ED51D92B9EF7850096892F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5ED51D72B9EF7850096892F /* LaunchScreen.storyboard */; };
 		A5ED51E42B9EF7860096892F /* CICDBlogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ED51E32B9EF7860096892F /* CICDBlogTests.swift */; };
-		A5ED51EE2B9EF7860096892F /* CICDBlogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ED51ED2B9EF7860096892F /* CICDBlogUITests.swift */; };
-		A5ED51F02B9EF7860096892F /* CICDBlogUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ED51EF2B9EF7860096892F /* CICDBlogUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +45,6 @@
 		A5ED51DF2B9EF7860096892F /* CICDBlogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CICDBlogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5ED51E32B9EF7860096892F /* CICDBlogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CICDBlogTests.swift; sourceTree = "<group>"; };
 		A5ED51E92B9EF7860096892F /* CICDBlogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CICDBlogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5ED51ED2B9EF7860096892F /* CICDBlogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CICDBlogUITests.swift; sourceTree = "<group>"; };
-		A5ED51EF2B9EF7860096892F /* CICDBlogUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CICDBlogUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +77,6 @@
 			children = (
 				A5ED51CB2B9EF7840096892F /* CICDBlog */,
 				A5ED51E22B9EF7860096892F /* CICDBlogTests */,
-				A5ED51EC2B9EF7860096892F /* CICDBlogUITests */,
 				A5ED51CA2B9EF7840096892F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,15 +111,6 @@
 				A5ED51E32B9EF7860096892F /* CICDBlogTests.swift */,
 			);
 			path = CICDBlogTests;
-			sourceTree = "<group>";
-		};
-		A5ED51EC2B9EF7860096892F /* CICDBlogUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A5ED51ED2B9EF7860096892F /* CICDBlogUITests.swift */,
-				A5ED51EF2B9EF7860096892F /* CICDBlogUITestsLaunchTests.swift */,
-			);
-			path = CICDBlogUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,8 +262,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5ED51F02B9EF7860096892F /* CICDBlogUITestsLaunchTests.swift in Sources */,
-				A5ED51EE2B9EF7860096892F /* CICDBlogUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
