@@ -43,5 +43,12 @@ workflows:
     jobs:
       - build-and-test:
           filters:
-            pull_requests: # Add this line
-              - "*" # This will match all pull requests
+            branches:
+              only:
+                - feature
+      - adhoc:
+          filters:
+            branches:
+              only: development
+          requires:
+            - build-and-test
