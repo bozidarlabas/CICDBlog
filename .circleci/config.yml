@@ -45,7 +45,7 @@ workflows:
           filters:
             branches:
               only:
-                - main
+                - feature
       - adhoc:
           filters:
             branches:
