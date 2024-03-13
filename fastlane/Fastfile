@@ -15,8 +15,7 @@ platform :ios do
     mode: :lint,      # SwiftLint mode: :lint (default) or :autocorrect
     output_file: "swiftlint.result.json", 
     executable: "./Pods/SwiftLint/swiftlint",
-    raise_if_swiftlint_error: true,      # Allow fastlane to raise an error if swiftlint fails
-    ignore_exit_status: true    # Allow fastlane to continue even if SwiftLint returns a non-zero exit status
+    raise_if_swiftlint_error: true 
   )
   end
 
