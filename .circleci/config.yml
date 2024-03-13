@@ -40,13 +40,14 @@ jobs:
 
 workflows:
   build-test-adhoc:
+    filters:
+      commit-message: /run-ci/
     jobs:
       - build-and-test:
           filters:
             branches:
               only:
                 - feature
-          commit-message: /run-ci/
       - adhoc:
           filters:
             branches:
