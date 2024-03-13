@@ -46,7 +46,7 @@ workflows:
             branches:
               only:
                 - feature
-            commit-message: /run-ci/
+          commit-message: /run-ci/
       - adhoc:
           filters:
             branches:
