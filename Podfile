@@ -5,6 +5,8 @@ target 'CICDBlog' do
 
   use_frameworks!
 
+  pod 'SwiftLint'
+
 
 
 end

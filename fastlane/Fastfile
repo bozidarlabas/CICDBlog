@@ -8,9 +8,15 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
-    scan(
-      include_simulator_logs: false
-    )
+    # scan(
+    #   include_simulator_logs: false
+    # )
+  swiftlint(
+    mode: :lint,      # SwiftLint mode: :lint (default) or :autocorrect
+    output_file: "swiftlint.result.json", 
+    executable: "./Pods/SwiftLint/swiftlint",
+    raise_if_swiftlint_error: true 
+  )
   end
 
   desc "Ad-hoc build"
