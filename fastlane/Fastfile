@@ -24,4 +24,11 @@ platform :ios do
     match(type: "adhoc")
     gym(export_method: "ad-hoc")
   end
+
+  desc "Submit a new Beta Build to Apple TestFlight"
+  desc "This will also make sure the profile is up to date"
+  lane :beta do
+    match(type: "appstore")
+    gym(export_method: "app-store")
+  end
 end

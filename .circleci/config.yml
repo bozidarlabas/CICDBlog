@@ -38,6 +38,21 @@ jobs:
       - store_artifacts:
           path: output
 
+  beta:
+    macos:
+      xcode: 14.0.1
+    environment:
+      FL_OUTPUT_DIR: output
+      FASTLANE_LANE: beta
+    steps:
+      - checkout
+      - run: bundle install
+      - run:
+          name: Fastlane
+          command: bundle exec fastlane $FASTLANE_LANE
+      - store_artifacts:
+          path: output/Blog.ipa
+
 workflows:
   build-test-adhoc:
     jobs:
@@ -52,3 +67,9 @@ workflows:
               only: development
           requires:
             - build-and-test
+      - beta:
+          filters:
+            branches:
+              only: release
+          # requires:
+          #   - build-and-test
