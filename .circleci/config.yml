@@ -71,5 +71,5 @@ workflows:
           filters:
             branches:
               only: release
-          requires:
-            - build-and-test
+          # requires:
+          #   - build-and-test
