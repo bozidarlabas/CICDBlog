@@ -57,10 +57,10 @@ workflows:
   build-test-adhoc:
     jobs:
       - build-and-test:
-          filters:
-            branches:
-              only:
-                - feature
+          # filters:
+          #   branches:
+          #     only:
+          #       - feature
       - adhoc:
           filters:
             branches:
@@ -71,5 +71,5 @@ workflows:
           filters:
             branches:
               only: release
-          # requires:
-          #   - build-and-test
+          requires:
+            - build-and-test
