@@ -23,7 +23,7 @@ final class CICDBlogTests: XCTestCase {
     }
 
     func testExample2() throws {
-        XCTAssertEqual("Hello2, World!", "Hello, World!")
+        XCTAssertEqual("Hellof2, World!", "Hello, World!")
     }
     
     func testExample3() throws {
