@@ -1,0 +1,14 @@
+git_url("https://github.com/bozidarlabas/CICDBlog")
+
+storage_mode("git")
+
+type("development") # The default type, can be: appstore, adhoc, enterprise or development
+
+app_identifier "com.bozidar.blog.CICDBlog"
+username "bozidar.labas@gmail.com"
+
+ENV["FASTLANE_PASSWORD"] = "abcdefgh" #Password to access git repo.
+ENV["MATCH_PASSWORD"] = "password" #Password for the .p12 files saved in git repo.
+
+
+
