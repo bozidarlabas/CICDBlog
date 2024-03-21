@@ -4,9 +4,4 @@ storage_mode("git")
 
 type("development") # The default type, can be: appstore, adhoc, enterprise or development
 
-app_identifier "com.bozidar.blog.CICDBlog"
-username "bozidar.labas@gmail.com"
-
-ENV["MATCH_PASSWORD"] = ""
-
 
