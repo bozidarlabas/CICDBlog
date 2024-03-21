@@ -1,4 +1,4 @@
-git_url("https://github.com/bozidarlabas/CICDBlog")
+git_url("git@github.com:bozidarlabas/CICDBlogKeys.git")
 
 storage_mode("git")
 
@@ -7,6 +7,6 @@ type("development") # The default type, can be: appstore, adhoc, enterprise or d
 app_identifier "com.bozidar.blog.CICDBlog"
 username "bozidar.labas@gmail.com"
 
-ENV["MATCH_PASSWORD"] = "" #Password for the .p12 files saved in git repo.
+ENV["MATCH_PASSWORD"] = ""
 
 
