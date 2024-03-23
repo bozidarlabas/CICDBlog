@@ -6,6 +6,14 @@ platform :ios do
     setup_circle_ci
   end
 
+  app_store_connect_api_key( 
+    key_id: "FC7S69KG4A", 
+    issuer_id: "2238b1f9-ee8c-4f2d-8894-819a9e8fc5d2",
+    key_content: "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JR1RBZ0VBTUJNR0J5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSEJIa3dkd0lCQVFRZ3RPa0R2TmNMY0s0WUhaWUsKZm1UR0ErT2tKb09XUHp0SmNXNlJOQVNzaUdHZ0NnWUlLb1pJemowREFRZWhSQU5DQUFSdWVDYXJtQ2Nub3hEZQphMnlJY3ZPNnd5dlJYSGpadlVQbWx0dnlvODVhMnZnaGdyQ1lZYUkxcTJzd0tXVkk1S0RMZFZSdzZZd0VjTjZXCmVJNVhIeGJGCi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0=",
+    is_key_content_base64: true,  
+    in_house: false  
+  )
+
   desc "Runs all the tests"
   lane :test do
     # scan(
@@ -25,10 +33,20 @@ platform :ios do
     gym(export_method: "ad-hoc")
   end
 
-  desc "Submit a new Beta Build to Apple TestFlight"
-  desc "This will also make sure the profile is up to date"
-  lane :beta do
-    match(type: "appstore")
-    gym(export_method: "app-store")
+  desc 'Fetch certificates and provisioning profiles'
+  lane :certificates do
+    match(
+    readonly: true
+    )
   end
+
+  desc "Upload to TestFlight"
+  lane :beta do
+    # Using default env variable names for fastlane to pick them up. 
+    app_store_connect_api_key(
+      is_key_content_base64: true,
+    )
+    pilot 
+  end
+
 end
