@@ -1,3 +1,4 @@
-app_identifier("com.bozidar.blog.CICDBlog")
-apple_id "bozidar.labas@gmail.com"
-team_id "4EFQD8RZ6V"
+app_identifier(ENV["FASTFILE_APP_IDENTIFIER"]) # The bundle identifier of your app
+apple_id(ENV["FASTFILE_USERNAME"]) # Your Apple email address
+itc_team_id(ENV["FASTFILE_ITC_TEAM_ID"]) # App Store Connect Team ID
+team_id(ENV["FASTFILE_TEAM_ID"]) # Developer Portal Team ID

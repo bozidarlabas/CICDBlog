@@ -1,7 +1,7 @@
-git_url("https://github.com/bozidarlabas/CICDBlogKeys.git")
-
+app_identifier(ENV["FASTFILE_APP_IDENTIFIER"])
+git_url(ENV["FASTFILE_GIT_URL"])
 storage_mode("git")
-
-type("appstore") # The default type, can be: appstore, adhoc, enterprise or development
+type(ENV["FASTFILE_MATCH_TYPE"])
+username(ENV["FASTFILE_USERNAME"])
 
 

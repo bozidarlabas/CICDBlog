@@ -58,7 +58,7 @@ platform :ios do
        build_number: latest_testflight_build_number + 1
      })
     gym(
-      export_method: 'app-store'
+      export_method: ENV["FASTFILE_GYM_EXPORT_METHOD"]
     )
     app_store_connect_api_key(
       is_key_content_base64: true,
