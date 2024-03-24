@@ -7,9 +7,9 @@ platform :ios do
   end
 
   app_store_connect_api_key( 
-    key_id: "FC7S69KG4A", 
+    key_id: "CR96XLDU4C", 
     issuer_id: "2238b1f9-ee8c-4f2d-8894-819a9e8fc5d2",
-    key_content: "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JR1RBZ0VBTUJNR0J5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSEJIa3dkd0lCQVFRZ3RPa0R2TmNMY0s0WUhaWUsKZm1UR0ErT2tKb09XUHp0SmNXNlJOQVNzaUdHZ0NnWUlLb1pJemowREFRZWhSQU5DQUFSdWVDYXJtQ2Nub3hEZQphMnlJY3ZPNnd5dlJYSGpadlVQbWx0dnlvODVhMnZnaGdyQ1lZYUkxcTJzd0tXVkk1S0RMZFZSdzZZd0VjTjZXCmVJNVhIeGJGCi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0=",
+    key_content: "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JR1RBZ0VBTUJNR0J5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSEJIa3dkd0lCQVFRZ05DOFgyb3l1NC9YbklFdWUKWndrNXNyU3lsSkdEL2ZZSHgxb05zTzdOeEd1Z0NnWUlLb1pJemowREFRZWhSQU5DQUFRdnZzdXdYeFF3aEZtbQo5N3pyRVQ3WXZzWXRPSmlHSGdweWc2NG8yVXlrSFFhanUzMiszVng3aFJ5T2V5eU4zZ0ZTQk45MCtMQzM3U0FICisrQThhRytBCi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0=",
     is_key_content_base64: true,  
     in_house: false  
   )
@@ -40,9 +40,19 @@ platform :ios do
     )
   end
 
+  desc 'Fetch code signing secrets. Build the iOS application.'
+  lane :build do
+    certificates
+    increment_build_number({
+       build_number: latest_testflight_build_number + 1
+     })
+    gym(
+      export_method: 'app-store'
+    )
+  end
+
   desc "Upload to TestFlight"
   lane :beta do
-    # Using default env variable names for fastlane to pick them up. 
     app_store_connect_api_key(
       is_key_content_base64: true,
     )

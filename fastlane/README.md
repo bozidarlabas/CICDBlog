@@ -39,6 +39,14 @@ Ad-hoc build
 
 Fetch certificates and provisioning profiles
 
+### ios build
+
+```sh
+[bundle exec] fastlane ios build
+```
+
+Fetch code signing secrets. Build the iOS application.
+
 ### ios beta
 
 ```sh
