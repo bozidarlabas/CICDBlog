@@ -53,6 +53,13 @@ platform :ios do
 
   desc "Upload to TestFlight"
   lane :beta do
+    certificates
+    increment_build_number({
+       build_number: latest_testflight_build_number + 1
+     })
+    gym(
+      export_method: 'app-store'
+    )
     app_store_connect_api_key(
       is_key_content_base64: true,
     )
